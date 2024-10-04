@@ -1,8 +1,15 @@
 import React from "react";
+import ReactDOM from 'react-dom/client';
 
-function Car() {
-  return <h2>I am a Car!</h2>
+function Football() {
+  const shoot = () => {
+    alert("Great Shot!");
+  }
+
+  return (
+    <button onClick={shoot}>Take thw Shot!</button>
+  );
 }
 
-export default Car;
-
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Football />);
